@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Teleinfo chat</title>
+    </head>
+    <body>
+        <div id="chat"></div>
+        <input type="text" id="message">
+        <button id="enviar">Enviar</button>
+        
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+        
+        <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+        <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyALykVLepZhESXSooBFnUEESyJSzmkkZFc",
+            authDomain: "chatfirebase-4f48a.firebaseapp.com",
+            databaseURL: "https://chatfirebase-4f48a.firebaseio.com",
+            projectId: "chatfirebase-4f48a",
+            storageBucket: "chatfirebase-4f48a.appspot.com",
+            messagingSenderId: "889428842133"
+        };
+        firebase.initializeApp(config);
+</script>
+    </body>
+
+
+</html>
