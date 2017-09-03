@@ -34,8 +34,22 @@ and open the template in the editor.
         </script>
         
         <script>  
+            var db = firebase.database(); 
+
+            $(document).ready(function(){
+                db.ref('mensajes').on('child_added', function(data){
+                $('#chat').append('<p>'+data.val().mensaje+'</p><br>')
+                console.log(data.val());
+                });
+            });
+            
+
             $('#enviar').on('click', function(){
-                console.log("Funciona!");
+                var mensaje = $('#message').val();
+                db.ref('mensajes').push({
+                    mensaje: mensaje
+                });
+                $('#message').val('');
             });
         </script>  
         </body>
